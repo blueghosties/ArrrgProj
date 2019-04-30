@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>McSquidder's Arrrg Encryption Form</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            width: auto;
+            background-color: #2196F3;
+            padding: 10px;
+
+        }
+        .divme {
+            word-wrap: normal;
+            word-break: break-all;
+            white-space: normal;
+            display: block;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body onload="myFunction()">
+
+<div class="w3-container">
+    <div class="divme">
+    <div class="grid-container">
+    <h1>McSquidder's Arrrg Encryption Form</h1>
+    <img src="https://i.pinimg.com/originals/77/b0/0d/77b00d278733616356e8340196d5b5dd.png" alt="McSquidder" width="400" height="400">
+    <form action="/process" method="POST" >
+        <p>You can encrypt or decrypt using just 1 button. Whatever is encrypted with this app, can be decrypted with this app. Copy and paste an entry<br>
+            from the msgs.txt file and paste it into the 'Decrypt your message' textbox. That's it.
+        </p>
+        <input type="text" name="pmsg" id="pM" size="150" placeholder="Enter in your message"><br>
+        <input type="text" name="demsg" id="dM" size="150" placeholder="Decrypt your message"><br>
+        <input type="submit" value="Submit"><br>
+
+    </form>
+
+    </div>
+        <p>{{.Emsg}}</p>
+        <p>{{.Dmsg}}</p>
+    </div>
+</div>
+</body>
+</html>
